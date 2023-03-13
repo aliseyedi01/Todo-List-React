@@ -33,7 +33,7 @@ const ToDoTask = ({ toDo, checkTask, delTask, setUpdateData }) => {
                       <FontAwesomeIcon icon={faCircleCheck} />
                     </span>
 
-                    {/* {task.status ? null : (
+                    {task.status ? null : (
                       <span
                         title="Edit"
                         role="button"
@@ -43,7 +43,7 @@ const ToDoTask = ({ toDo, checkTask, delTask, setUpdateData }) => {
                       >
                         <FontAwesomeIcon icon={faPen} />
                       </span>
-                    )} */}
+                    )}
 
                     <span
                       title="Remove"

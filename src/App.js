@@ -8,8 +8,8 @@ import UpdateTask from "./components/UpdateTask";
 function App() {
   // State
   const [toDo, setToDo] = useState([
-    { id: 1, title: "book1", status: false },
-    { id: 2, title: "book2", status: true },
+    { id: 1, title: "Task1", status: false },
+    { id: 2, title: "Task2", status: false },
   ]);
 
   const [newTask, setNewTask] = useState("");
@@ -68,11 +68,12 @@ function App() {
   return (
     <div className=" vh-100 vw-100  d-flex justify-content-center align-items-center bg-success  ">
       <div className=" w-50 d-flex flex-column justify-content-center align-items-center  ">
-        {/* Add Task */}
-        <AddTask newTask={newTask} setNewTask={setNewTask} addTask={addTask} />
-
-        {/* Update Task */}
-        <UpdateTask updateData={updateData} changeTask={changeTask} cancelUpdate={cancelUpdate} updateTask={updateTask} />
+        {/* handle update and add task */}
+        {updateData && updateData ? (
+          <UpdateTask updateData={updateData} changeTask={changeTask} cancelUpdate={cancelUpdate} updateTask={updateTask} />
+        ) : (
+          <AddTask newTask={newTask} setNewTask={setNewTask} addTask={addTask} />
+        )}
 
         {/* No Task Warning */}
         {toDo && toDo.length ? "" : "No Task ..."}
