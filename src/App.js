@@ -68,6 +68,9 @@ function App() {
   return (
     <div className=" vh-100 vw-100  d-flex justify-content-center align-items-center bg-success  ">
       <div className=" w-50 d-flex flex-column justify-content-center align-items-center  ">
+        {/* Title  */}
+        <h1 className="text-warning">ToDo Task</h1>
+
         {/* handle update and add task */}
         {updateData && updateData ? (
           <UpdateTask updateData={updateData} changeTask={changeTask} cancelUpdate={cancelUpdate} updateTask={updateTask} />
