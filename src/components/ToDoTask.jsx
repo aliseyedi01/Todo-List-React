@@ -18,7 +18,7 @@ const ToDoTask = ({ toDo, checkTask, delTask, setUpdateData }) => {
                   <div className="d-flex flex-row align-items-center ">
                     <div className={task.status ? "text-decoration-line-through , opacity-50" : ""}>
                       <span className="rounded text-bg-light px-1 py-0 ">{index + 1}</span>
-                      <span className="px-1 text-capitalize">{task.title}</span>
+                      <span className="px-2 text-capitalize">{task.title}</span>
                     </div>
                   </div>
                   {/* right */}

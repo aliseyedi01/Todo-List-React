@@ -69,7 +69,7 @@ function App() {
     <div className=" vh-100 vw-100  d-flex justify-content-center align-items-center bg-success  ">
       <div className=" w-50 d-flex flex-column justify-content-center align-items-center  ">
         {/* Title  */}
-        <h1 className="text-warning">ToDo Task</h1>
+        <h1 className="text-warning mb-2">ToDo Task</h1>
 
         {/* handle update and add task */}
         {updateData && updateData ? (
