@@ -13,7 +13,7 @@ const ToDoTask = ({ toDo, checkTask, delTask, setUpdateData }) => {
           .map((task, index) => {
             return (
               <React.Fragment key={task.id}>
-                <div className="d-flex w-50 flex-row justify-content-between align-content-center p-2 text-bg-primary m-1 rounded">
+                <div className=" w-100 d-flex flex-row justify-content-between align-content-center p-2 text-bg-primary m-1 rounded ">
                   {/* Left */}
                   <div className="d-flex flex-row align-items-center ">
                     <div className={task.status ? "text-decoration-line-through , opacity-50" : ""}>

@@ -1,6 +1,6 @@
 const UpdateTask = ({ updateData, changeTask, updateTask, cancelUpdate }) => {
   return (
-    <div className=" w-50 h-50 input-group mb-1">
+    <div className=" col col-md-6 h-50 input-group mb-1">
       <input
         value={updateData && updateData.title}
         onChange={(e) => {

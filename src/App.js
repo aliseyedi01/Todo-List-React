@@ -77,7 +77,7 @@ function App() {
 
   return (
     <div className=" vh-100 vw-100  d-flex justify-content-center align-items-center bg-success  ">
-      <div className=" w-50 d-flex flex-column justify-content-center align-items-center  ">
+      <div className=" col-10 col-md-6 d-flex flex-column justify-content-center align-items-center  ">
         {/* Title  */}
         <h1 className="text-warning mb-2">ToDo Task</h1>
 
