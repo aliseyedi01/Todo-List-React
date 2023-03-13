@@ -20,10 +20,16 @@ function App() {
     setToDo(newTask);
   };
 
+  // Delete Task
+  const DeleteTask = (id) => {
+    let newTask = toDo.filter((task) => task.id !== id);
+    setToDo(newTask);
+  };
+
   return (
     <div className="container App  d-flex justify-content-center align-items-center   ">
       <div className=" d-flex flex-column justify-content-center align-items-center w-50 ">
-        <ToDoTask toDo={toDo} checkTask={CheckTask} />
+        <ToDoTask toDo={toDo} checkTask={CheckTask} delTask={DeleteTask} />
       </div>
     </div>
   );
