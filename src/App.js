@@ -29,6 +29,9 @@ function App() {
   return (
     <div className="container App  d-flex justify-content-center align-items-center   ">
       <div className=" d-flex flex-column justify-content-center align-items-center w-50 ">
+        {/* No Task Warning */}
+        {toDo && toDo.length ? "" : "No Task ..."}
+        {/* ToDo Task */}
         <ToDoTask toDo={toDo} checkTask={CheckTask} delTask={DeleteTask} />
       </div>
     </div>
