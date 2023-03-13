@@ -79,7 +79,7 @@ function App() {
         )}
 
         {/* No Task Warning */}
-        {toDo && toDo.length ? "" : "No Task ..."}
+        {toDo && toDo.length ? "" : <h4 className="text-white opacity-50">No Tasks</h4>}
 
         {/* ToDo Task */}
         <ToDoTask toDo={toDo} checkTask={CheckTask} delTask={DeleteTask} setUpdateData={setUpdateData} />
