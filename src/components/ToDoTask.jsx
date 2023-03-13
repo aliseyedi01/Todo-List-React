@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck, faPen, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
-const ToDoTask = ({ toDo, checkTask, delTask }) => {
+const ToDoTask = ({ toDo, checkTask, delTask, setUpdateData }) => {
   return (
     <>
       {toDo &&
@@ -33,9 +33,17 @@ const ToDoTask = ({ toDo, checkTask, delTask }) => {
                       <FontAwesomeIcon icon={faCircleCheck} />
                     </span>
 
-                    <span title="Edit" role="button">
-                      <FontAwesomeIcon icon={faPen} />
-                    </span>
+                    {/* {task.status ? null : (
+                      <span
+                        title="Edit"
+                        role="button"
+                        onClick={() => {
+                          setUpdateData({ id: task.id, title: task.title, status: !!task.status });
+                        }}
+                      >
+                        <FontAwesomeIcon icon={faPen} />
+                      </span>
+                    )} */}
 
                     <span
                       title="Remove"
