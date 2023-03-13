@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import ToDoTask from "./components/ToDoTask";
@@ -7,13 +7,23 @@ import UpdateTask from "./components/UpdateTask";
 
 function App() {
   // State
-  const [toDo, setToDo] = useState([
-    { id: 1, title: "Task1", status: false },
-    { id: 2, title: "Task2", status: false },
-  ]);
+  const [toDo, setToDo] = useState([]);
 
   const [newTask, setNewTask] = useState("");
   const [updateData, setUpdateData] = useState("");
+
+  // local Storage
+  useEffect(() => {
+    let storedTasks = JSON.parse(localStorage.getItem("tasks"));
+
+    if (storedTasks) {
+      setToDo(storedTasks);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(toDo));
+  }, [toDo]);
 
   // check Done Task
   const CheckTask = (id) => {
